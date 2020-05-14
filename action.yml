@@ -1,7 +1,8 @@
 name: 'Neocities Deploy'
 author: 'Felix Mattick'
-icon: 'upload-cloud'
-color: 'orange'
+branding:
+  icon: 'upload-cloud'
+  color: 'orange'
 description: 'Deploy a static site to Neocities with the Neocel command-line tool'
 inputs:
   directory:
