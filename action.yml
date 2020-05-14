@@ -1,0 +1,13 @@
+name: 'Neocities Deploy'
+author: 'Felix Mattick'
+description: 'Deploy a static site to Neocities with the Neocel command-line tool'
+inputs:
+  directory:
+    description: 'The directory to deploy'
+    required: true
+    default: '.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.directory }}
