@@ -6,8 +6,12 @@ inputs:
     description: 'The directory to deploy'
     required: true
     default: '.'
+  neocities_token:
+    description: 'Your Neocities API token'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.directory }}
+    - ${{ inputs.neocities_token }}

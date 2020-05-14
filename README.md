@@ -9,17 +9,15 @@ For more info, check out [this article by GitHub](https://help.github.com/en/act
 
 ```yml
 name: 'My Workflow'
-
-on:
-  release:
-    types: [published]
+on: [push]
 
 jobs:
   deploy:
     name: 'Deploy to Neocities'
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: kognise/neocities-deploy-action@v1
+      - uses: kognise/neocities-deploy-action@master
         with:
           neocities_token: ${{ secrets.NEOCITIES_TOKEN }}
           directory: '.'
@@ -53,14 +51,12 @@ Here's an example of a valid workflow configuration that builds a Node.js static
 
 ```yml
 name: 'Deploy'
-
-on:
-  release:
-    types: [published]
+on: [push]
 
 jobs:
   deploy:
     name: 'Deploy to Neocities'
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
@@ -68,7 +64,7 @@ jobs:
           node-version: '12'
       - run: npm install
       - run: npm run build
-      - uses: kognise/neocities-deploy-action@v1
+      - uses: kognise/neocities-deploy-action@master
         with:
           neocities_token: ${{ secrets.NEOCITIES_TOKEN }}
           directory: 'out/'
