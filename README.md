@@ -19,7 +19,7 @@ jobs:
     name: 'Deploy to Neocities'
     steps:
       - uses: actions/checkout@v1
-      - uses: kognise/neocel-action@v1
+      - uses: kognise/neocities-deploy-action@v1
         with:
           neocities_token: ${{ secrets.NEOCITIES_TOKEN }}
           directory: '.'
@@ -68,7 +68,7 @@ jobs:
           node-version: '12'
       - run: npm install
       - run: npm run build
-      - uses: kognise/neocel-action@v1
+      - uses: kognise/neocities-deploy-action@v1
         with:
           neocities_token: ${{ secrets.NEOCITIES_TOKEN }}
           directory: 'out/'
