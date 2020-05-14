@@ -5,7 +5,7 @@ This is a simple GitHub Action that can deploy a static website to Neocities.
 ## Usage
 
 To use a GitHub action you can just reference it on your Workflow file.
-For more info, check out [this article by GitHub](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow)).
+For more info, check out [this article by GitHub](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow).
 
 ```yml
 name: 'My Workflow'
